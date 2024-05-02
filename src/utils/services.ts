@@ -10,11 +10,11 @@ export const services: Array<serviceType> = [
   {
     image: alteration,
     title: "alterations",
-    text: "We ensure that your dress seamlessly fits you, making the necessary adjustments to suit your individual needs. ",
+    text: "We ensure that your outfit seamlessly fits you, making the necessary adjustments to suit your individual needs. ",
   },
   {
     image: consultant,
     title: "consulting",
-    text: "We’re here to assist you with any special requests or concerns, from fabric choices to dress style inspirations. ",
+    text: "We’re here to assist you with any special requests or concerns, from fabric choices to outifit style inspirations. ",
   },
 ];

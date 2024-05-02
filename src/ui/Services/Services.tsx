@@ -22,7 +22,7 @@ const Services = () => {
                 From the initial consultation to the final touches, we work
                 closely with you to ensure every detail is perfectly captured.
                 Whether you have a specific design in mind or need guidance from
-                us, we&#8217;re here to bring your dream gown to life.
+                us, we&#8217;re here to bring your dream outfit to life.
               </span>
             </p>
           </div>
