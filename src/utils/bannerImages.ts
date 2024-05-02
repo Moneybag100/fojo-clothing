@@ -1,6 +1,7 @@
 import {
   bannerPics10,
   bannerPics11,
+  bannerPics12,
   bannerPics5,
   bannerPics6,
   bannerPics7,
@@ -17,4 +18,5 @@ export const images: Array<Image> = [
   bannerPics9,
   bannerPics10,
   bannerPics11,
+  bannerPics12,
 ];
