@@ -20,7 +20,7 @@ const ContactInfo = () => {
         </div>
         <div className="md:space-y-6text-left flex flex-col items-start justify-between  space-y-1 md:space-y-2">
           <h3 className="text-xl font-semibold">Store Hours</h3>
-          <p>
+          <p className="flex flex-col items-start justify-between text-left">
             <span className="block">M-F: 10am – 7pm</span>
             <span className="block">Sat: 10am – 6pm</span>
             <span className="block"> Sun: closed</span>
