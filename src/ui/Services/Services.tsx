@@ -1,4 +1,4 @@
-import { serviceGirl, serviceGirl2 } from "../../utils/Image";
+import { serviceGirl } from "../../utils/Image";
 import ServicesType from "./ServicesType";
 
 const Services = () => {
