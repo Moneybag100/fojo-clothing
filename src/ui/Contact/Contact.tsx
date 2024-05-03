@@ -3,9 +3,9 @@ import ContactInfo from "./ContactInfo";
 
 const Contact = () => {
   return (
-    <div className="purpleBg globalPadding sectionMargn w-full !pb-16 lg:mt-28">
-      <div className="max-w-custom m-auto w-full text-left md:text-center">
-        <h2 className="subtitleFont mt-6 text-left md:mt-8 md:text-center">
+    <div className="purpleBg globalPadding sectionMargn lg:mt-26 w-full !pb-16">
+      <div className="m-auto w-full max-w-custom text-left md:text-center">
+        <h2 className="subtitleFont mt-4 text-left md:mt-8 md:text-center">
           Contact
         </h2>
         <div className="paragraphFont mt-4 md:mt-8">
@@ -16,7 +16,7 @@ const Contact = () => {
             enjoy our relationships with our clients and look forward to
             assisting you soon.
           </p>
-          <div className="mt-8 flex w-full flex-col items-center justify-between gap-8 md:mt-20 md:gap-16 ml:flex-row">
+          <div className="mt-4 flex w-full flex-col items-center justify-between gap-8 md:mt-20 md:gap-16 ml:flex-row">
             <ContactForm />
             <ContactInfo />
           </div>

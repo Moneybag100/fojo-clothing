@@ -4,10 +4,11 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { images } from "../../utils/bannerImages";
 import BannerContent from "./BannerContent";
 import HeaderContent from "../../ui/HeaderContent";
+import FollowUs from "../../ui/FollowUs";
 
 const Banner = () => {
   return (
-    <div className="afterImage w-full">
+    <div className="afterImage relative w-full">
       <AliceCarousel
         animationType="fadeout"
         animationDuration={1000}
@@ -24,6 +25,9 @@ const Banner = () => {
         ))}
       </AliceCarousel>
       <HeaderContent />
+      <div className="absolute -bottom-[24px] left-1/2 z-[999] w-[80%] -translate-x-1/2 transform bg-lightOffWhite md:bottom-0 md:left-0 md:w-max">
+        <FollowUs />
+      </div>
     </div>
   );
 };

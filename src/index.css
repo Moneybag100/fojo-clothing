@@ -39,7 +39,7 @@
   @apply mt-16 md:mt-24 lg:mt-28;
 }
 .paragraphFont {
-  @apply text-lg md:text-xl;
+  @apply text-sm md:text-base;
 }
 
 .navLink {

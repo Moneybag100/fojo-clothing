@@ -3,13 +3,13 @@ const HeaderContent = () => {
     <div className="absolute left-0 top-0 z-[998] flex h-full w-full text-lightOffWhite">
       <div className="m-auto text-center font-medium">
         <div>
-          <p className="md:3xl text-2xl">Look your best.</p>
+          <p className="md:2xl text-xl">Look your best.</p>
         </div>
         <h1>
           <span className="block text-5xl font-bold m:text-6xl md:text-7xl">
             Fojo Clothing
           </span>
-          <span className="text-lightGrayText md:3xl block text-[1.4rem] italic m:text-2xl">
+          <span className="block italic text-lightGrayText m:text-lg">
             we give you the confidence you deserve.
           </span>
         </h1>

@@ -9,6 +9,9 @@ export default {
       bg: "#F5F5F5 ",
       lightOffWhite: "#F8F8F8",
       lightGrayText: "#CCCCCC",
+      // charcoal: "#000000",
+      // charcoal: "#2C1E3D",
+      charcoal: "#333333",
     },
     screens: {
       xxm: "360px",
@@ -22,7 +25,8 @@ export default {
       "2xl": "1536px",
     },
     fontFamily: {
-      display: ["Cormorant Garamond", "serif"],
+      // display: ["Cormorant Garamond", "serif"],
+      display: ["Playfair Display", "serif"],
     },
     maxWidth: {
       custom: "1200px",

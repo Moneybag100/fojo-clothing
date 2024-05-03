@@ -13,7 +13,7 @@ const Outfits = () => {
               className="h-full w-auto"
             />
           </div>
-          <p className="mx-auto text-xl italic lg:w-3/5">
+          <p className="mx-auto text-lg italic lg:w-3/5">
             Our brand combines modern and classic elements to create stunningly
             breathtaking looks that stand the test of time. Explore our
             collection now and find the dream dress for your perfect day.
