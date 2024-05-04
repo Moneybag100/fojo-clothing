@@ -8,9 +8,9 @@ const Services = () => {
         <h2 className="subtitleFont text-left md:text-center">
           Bespoke Services
         </h2>
-        <div className="mt-8 flex w-full  flex-col items-start justify-between gap-4 md:mt-16 md:flex-row md:items-center">
+        <div className="mt-4 flex w-full  flex-col items-start justify-between gap-4 md:mt-16 md:flex-row md:items-center">
           <div className="w-full space-y-4 text-left md:w-[40%]">
-            <h2 className="text-3xl font-medium m:text-4xl md:text-4xl ">
+            <h2 className="text-xl font-medium m:text-2xl md:text-3xl ml:text-3xl ">
               Expertly tailored from concept to creation
             </h2>
             <p className="paragraphFont space-y-4">
