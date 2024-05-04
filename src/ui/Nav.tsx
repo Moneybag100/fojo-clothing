@@ -1,31 +1,59 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Rotate as Hamburger } from "hamburger-react";
-import { Logo } from "../utils/Image";
 import NavLinks from "./NavLinks";
+import logoSvg from "./../assets/logo/fojoWhiteLogo.png";
+import logoSvg2 from "./../assets/logo/fojoPlainPurpleLogo.png";
+// import logoSvg3 from "./../assets/logo/fojoPlainPurpleLogo.svg";
 import Sidebar from "./Sidebar";
 
 const Nav = () => {
   const [showSideBar, setShowSideBar] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const scrollThreshold = 120;
+      setIsScrolled(scrollTop > scrollThreshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleSidebar = () => {
     setShowSideBar(!showSideBar);
   };
+
+  const closeSidebar = () => {
+    setShowSideBar(false);
+  };
   return (
-    <div className="globalPadding fixed left-0 top-0 z-[999] flex w-full ">
-      <div className="bg-purple-600 relative m-auto mt-6 flex w-full max-w-[650px] items-center md:mt-20">
-        <div className=" absolute left-0 top-1/2 h-16  w-16 -translate-y-1/2 transform rounded-md md:left-1/2 md:h-[7.5rem] md:w-[7.5rem] md:-translate-x-1/2">
-          <img src={Logo.src} alt={Logo.altText} className="h-full w-full" />
-        </div>
-        <NavLinks className="hidden md:block" />
-        <div className="ml-auto block rounded-md bg-primaryColor md:hidden">
-          <Hamburger
-            size={20}
-            distance="sm"
-            onToggle={toggleSidebar}
-            color="#ffffff"
+    <div
+      className={`globalPadding fixed left-0 top-0 z-[999] flex w-full transition-all duration-150 ease-linear  md:!py-3 ${isScrolled ? "bg-bg shadow-xl" : "bg-none"}`}
+    >
+      <div className="bg-purple-600 relative m-auto flex  w-full max-w-custom items-center">
+        <div className="mr-auto h-14  w-14  rounded-md md:h-16 md:w-16">
+          <img
+            src={isScrolled ? logoSvg2 : logoSvg}
+            alt={"logo"}
+            className="h-full w-full"
           />
         </div>
-        <Sidebar showSidebar={showSideBar} />
+        <div className="flex w-full max-w-[500px]">
+          <NavLinks
+            className={`my-auto ml-auto hidden !text-sm md:block ${isScrolled ? "md:!text-textColor" : ""}`}
+          />
+        </div>
+
+        <div
+          className={`ml-auto block rounded-md md:hidden ${isScrolled ? "text-textColor" : "text-lightOffWhite"}`}
+        >
+          <Hamburger size={20} distance="sm" onToggle={toggleSidebar} />
+        </div>
+        <Sidebar showSidebar={showSideBar} closeSidebar={closeSidebar} />
       </div>
     </div>
   );

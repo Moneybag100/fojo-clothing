@@ -29,7 +29,7 @@ export default {
       display: ["Playfair Display", "serif"],
     },
     maxWidth: {
-      custom: "1200px",
+      custom: "1000px",
     },
 
     extend: {},

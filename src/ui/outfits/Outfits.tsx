@@ -3,7 +3,7 @@ import OutfitContent from "./OutfitContent";
 
 const Outfits = () => {
   return (
-    <div className="sectionMargn flex w-full ">
+    <section className="sectionMargn flex w-full " id="outfits">
       <div className="m-auto flex w-full flex-col text-center">
         <div className="mx-auto flex flex-col px-4">
           <div className="mx-auto h-24">
@@ -21,7 +21,7 @@ const Outfits = () => {
         </div>
         <OutfitContent />
       </div>
-    </div>
+    </section>
   );
 };
 

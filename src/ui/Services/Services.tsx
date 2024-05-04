@@ -3,7 +3,10 @@ import ServicesType from "./ServicesType";
 
 const Services = () => {
   return (
-    <div className="globalPadding sectionMargn item-center flex w-full flex-col justify-between">
+    <section
+      id="services"
+      className="globalPadding sectionMargn item-center flex w-full flex-col justify-between"
+    >
       <div className="mx-auto w-full max-w-custom  text-left md:text-center">
         <h2 className="subtitleFont text-left md:text-center">
           Bespoke Services
@@ -45,7 +48,7 @@ const Services = () => {
         </div>
       </div>
       <ServicesType />
-    </div>
+    </section>
   );
 };
 
