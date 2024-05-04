@@ -33,7 +33,7 @@
 }
 
 .subtitleFont {
-  @apply text-4xl font-bold m:text-5xl md:text-5xl;
+  @apply text-3xl font-bold m:text-4xl md:text-5xl;
 }
 .sectionMargn {
   @apply mt-16 md:mt-24 lg:mt-28;

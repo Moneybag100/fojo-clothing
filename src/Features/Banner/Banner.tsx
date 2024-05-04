@@ -25,7 +25,7 @@ const Banner = () => {
         ))}
       </AliceCarousel>
       <HeaderContent />
-      <div className="absolute -bottom-[24px] left-1/2 z-[999] w-[80%] -translate-x-1/2 transform bg-lightOffWhite md:bottom-0 md:left-0 md:w-max">
+      <div className="absolute -bottom-[24px] left-1/2  z-[998] w-max -translate-x-1/2 bg-lightOffWhite md:-bottom-[1px] md:left-[-6.5rem] md:-translate-y-[170%] md:translate-x-0 md:-rotate-90">
         <FollowUs />
       </div>
     </div>

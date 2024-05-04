@@ -4,23 +4,28 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TiSocialFacebookCircular } from "react-icons/ti";
 
 interface SocialLinkProp {
+  rotate?: boolean;
   className?: string;
 }
-const SocialLink = ({ className }: SocialLinkProp) => {
+const SocialLink = ({ rotate, className }: SocialLinkProp) => {
   return (
     <div
-      className={`flex flex-row items-center justify-between gap-[6px]  md:flex-col ${className ? className : ""}`}
+      className={`flex flex-row items-center justify-between gap-4 ${className ? className : ""}`}
     >
-      <Link to={"#"}>
+      <Link to={"#"} className={`${rotate ? "rotate-0 md:rotate-90" : ""}`}>
         <TiSocialFacebookCircular className="text-[1.7rem]" />
       </Link>
-      <Link to={"#"}>
+      <Link to={"#"} className={`${rotate ? "rotate-0 md:rotate-90" : ""}`}>
         <FaInstagram className="text-xl" />
       </Link>
-      <Link to={"#"}>
+      <Link to={"#"} className={`${rotate ? "rotate-0 md:rotate-90" : ""}`}>
         <FaXTwitter className="text-xl" />
       </Link>
-      <Link to={"#"}>
+      <Link
+        to={`https://api.whatsapp.com/send?phone=${+2348024397965}`}
+        target="_blank"
+        className={`${rotate ? "rotate-0 md:rotate-90" : ""}`}
+      >
         <FaWhatsapp className="text-xl" />
       </Link>
     </div>

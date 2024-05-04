@@ -3,7 +3,10 @@ import ContactInfo from "./ContactInfo";
 
 const Contact = () => {
   return (
-    <div className="purpleBg globalPadding sectionMargn lg:mt-26 w-full !pb-16">
+    <section
+      className=" globalPadding sectionMargn lg:mt-26 w-full !pb-16"
+      id="contact"
+    >
       <div className="m-auto w-full max-w-custom text-left md:text-center">
         <h2 className="subtitleFont mt-4 text-left md:mt-8 md:text-center">
           Contact
@@ -22,7 +25,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

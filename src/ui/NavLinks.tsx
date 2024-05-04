@@ -1,34 +1,79 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 interface NavLinksProp {
   className?: string;
+  closeSidebar?: () => void;
 }
 
-const NavLinks = ({ className }: NavLinksProp) => {
+const NavLinks = ({ className, closeSidebar }: NavLinksProp) => {
   return (
     <nav
-      className={`bg-slate-500 mx-auto w-full font-medium uppercase ${className ? className : ""}`}
+      className={`bg-slate-500 mx-auto w-full text-lg font-medium uppercase text-textColor md:text-lightOffWhite ${className ? className : ""}`}
     >
-      <ul className="md:base flex flex-col items-start text-lg text-textColor md:flex-row md:items-center md:text-lightOffWhite">
-        <li className="w-full border-b border-primaryColor py-4 md:mr-12 md:w-max md:border-none md:!p-0">
-          <NavLink to={"#"} className={"navLink"}>
+      <ul className="md:base flex flex-col items-start md:flex-row md:items-center md:justify-between ">
+        <li className="w-full cursor-pointer border-b border-primaryColor  py-4 md:w-max md:border-none md:!p-0">
+          <Link
+            to="outfits"
+            smooth={true}
+            className={"navLink"}
+            spy={true}
+            hashSpy={true}
+            saveHashHistory={true}
+            delay={200}
+            offset={100}
+            duration={1000}
+            onClick={closeSidebar}
+          >
             Outfits
-          </NavLink>
+          </Link>
         </li>
-        <li className="w-full border-b border-primaryColor py-4 md:mr-auto md:w-max md:border-none md:!p-0">
-          <NavLink to={"#"} className={"navLink"}>
+        <li className="w-full cursor-pointer border-b border-primaryColor  py-4 md:w-max md:border-none md:!p-0">
+          <Link
+            to="about-us"
+            smooth={true}
+            className={"navLink"}
+            spy={true}
+            hashSpy={true}
+            saveHashHistory={true}
+            delay={200}
+            offset={-80}
+            duration={1000}
+            onClick={closeSidebar}
+          >
             About us
-          </NavLink>
+          </Link>
         </li>
-        <li className="w-full border-b border-primaryColor py-4 md:w-max md:border-none md:!p-0">
-          <NavLink to={"#"} className={"navLink"}>
+        <li className="w-full cursor-pointer border-b border-primaryColor py-4 md:w-max md:border-none md:!p-0">
+          <Link
+            to="services"
+            smooth={true}
+            className={"navLink"}
+            spy={true}
+            hashSpy={true}
+            saveHashHistory={true}
+            delay={200}
+            offset={-80}
+            duration={1000}
+            onClick={closeSidebar}
+          >
             Services
-          </NavLink>
+          </Link>
         </li>
-        <li className="w-full border-b border-primaryColor py-4 md:ml-12 md:w-max md:border-none md:!p-0">
-          <NavLink to={"#"} className={"navLink"}>
+        <li className="w-full cursor-pointer border-b border-primaryColor  py-4 md:w-max md:border-none md:!p-0">
+          <Link
+            to="contact"
+            smooth={"easeOutQuad"}
+            className={"navLink"}
+            spy={true}
+            hashSpy={true}
+            saveHashHistory={true}
+            delay={200}
+            offset={-80}
+            duration={1000}
+            onClick={closeSidebar}
+          >
             Contact Us
-          </NavLink>
+          </Link>
         </li>
       </ul>
     </nav>
