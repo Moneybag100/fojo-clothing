@@ -20,7 +20,7 @@ const NavLinks = ({ className, closeSidebar }: NavLinksProp) => {
             hashSpy={true}
             saveHashHistory={true}
             delay={200}
-            offset={100}
+            offset={-80}
             duration={1000}
             onClick={closeSidebar}
           >

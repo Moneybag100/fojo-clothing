@@ -1,5 +1,6 @@
 import Ceo from "./Ceo";
 import logo from "./../../assets/logo/fojoWord.png";
+import SectionHeader from "../SectionHeader";
 
 const AboutUs = () => {
   return (
@@ -11,13 +12,10 @@ const AboutUs = () => {
         backgroundPosition: "center",
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        // animation: " zoomOut 7500ms linear infinite",
       }}
     >
       <div className="m-auto w-full max-w-custom text-left md:text-center">
-        <h2 className="subtitleFont text-left md:text-center">
-          About Kojo Clothing
-        </h2>
+        <SectionHeader title="About Kojo Clothing" />
         <p className="paragraphFont  mt-4 md:mt-16">
           About Kojo Clothing is a tailoring and custom clothing brand in Ibadan
           Nigeria. What sets our shop apart? We&rsquo;re locally-owned and are

@@ -4,9 +4,11 @@ export default {
   theme: {
     colors: {
       white: "#FFFFFF",
-      primaryColor: "#8B5FBF",
+      primaryColor: "#4B0082",
+      // primaryColor: "#8B5FBF",
       textColor: "#333333",
-      bg: "#F5F5F5 ",
+      bg: "#FFFFFF",
+      // bg: "#F5F5F5 ",
       lightOffWhite: "#F8F8F8",
       lightGrayText: "#CCCCCC",
       // charcoal: "#000000",
@@ -26,7 +28,8 @@ export default {
     },
     fontFamily: {
       // display: ["Cormorant Garamond", "serif"],
-      display: ["Playfair Display", "serif"],
+      display: ["Noto Sans Georgian", "sans - serif"],
+      display2: ["GFS Didot", "serif"],
     },
     maxWidth: {
       custom: "1000px",

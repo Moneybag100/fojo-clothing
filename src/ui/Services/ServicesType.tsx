@@ -1,23 +1,79 @@
+import { motion } from "framer-motion";
 import { services } from "../../utils/services";
 
 const ServicesType = () => {
+  const containerVariants = {
+    hidden: { opacity: 0.5 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+        staggerChildren: 0.3,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: 30 },
+    visible: {
+      opacity: [0, 0.3, 0.6, 0.8, 1],
+      x: 0,
+      transition: {
+        duration: 0.9,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="mx-auto mt-28 grid w-full max-w-custom grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <motion.div
+      className="mx-auto mt-28 grid w-full max-w-custom grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       {services.map((service, i) => (
-        <div
+        <motion.div
           className="item-center flex flex-col justify-start gap-y-2"
           key={i}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          <div className="mx-auto">
+          <motion.div className="mx-auto" variants={imageVariants}>
             <img src={service.image.src} alt={service.image.altText} />
-          </div>
-          <h3 className="mx-auto text-2xl font-semibold capitalize md:text-3xl">
+          </motion.div>
+          <motion.h3
+            className="mx-auto text-2xl font-semibold capitalize text-primaryColor md:text-3xl"
+            variants={itemVariants}
+          >
             {service.title}
-          </h3>
-          <p className="paragraphFont mx-auto text-center">{service.text}</p>
-        </div>
+          </motion.h3>
+          <motion.p
+            className="paragraphFont mx-auto text-center"
+            variants={itemVariants}
+          >
+            {service.text}
+          </motion.p>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
