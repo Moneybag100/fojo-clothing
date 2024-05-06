@@ -53,11 +53,37 @@
   @apply origin-left scale-[1];
 }
 
+.slideOut {
+  animation: slideOut 1500ms linear;
+}
+.fadeOut {
+  animation: fadeOut 1000ms linear;
+  animation-delay: 1000ms;
+}
 .alice-carousel__stage-item.__active .zoomout {
   animation: zoomOut 7500ms linear infinite;
 }
 .alice-carousel__stage-item.animated.animated-out .zoomed {
   transform: scale(1.18);
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes zoomOut {

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Rotate as Hamburger } from "hamburger-react";
 import NavLinks from "./NavLinks";
-import logoSvg from "./../assets/logo/fojoWhiteLogo.png";
-import logoSvg2 from "./../assets/logo/fojoPlainPurpleLogo.png";
+import logo from "./../assets/logo/fojoWhiteLogo.png";
+import logo2 from "./../assets/logo/fojoPlainPurpleLogo.png";
 // import logoSvg3 from "./../assets/logo/fojoPlainPurpleLogo.svg";
 import Sidebar from "./Sidebar";
 
@@ -37,7 +37,7 @@ const Nav = () => {
       <div className="bg-purple-600 relative m-auto flex  w-full max-w-custom items-center">
         <div className="mr-auto h-14  w-14  rounded-md md:h-16 md:w-16">
           <img
-            src={isScrolled ? logoSvg2 : logoSvg}
+            src={isScrolled ? logo2 : logo}
             alt={"logo"}
             className="h-full w-full"
           />

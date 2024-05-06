@@ -1,3 +1,4 @@
+import SectionHeader from "../SectionHeader";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 
@@ -8,9 +9,10 @@ const Contact = () => {
       id="contact"
     >
       <div className="m-auto w-full max-w-custom text-left md:text-center">
-        <h2 className="subtitleFont mt-4 text-left md:mt-8 md:text-center">
+        {/* <h2 className="subtitleFont mt-4 text-left md:mt-8 md:text-center">
           Contact
-        </h2>
+        </h2> */}
+        <SectionHeader title=" Contact" />
         <div className="paragraphFont mt-4 md:mt-8">
           <p>
             Due to our demand we have now moved to an appointment only approach.
