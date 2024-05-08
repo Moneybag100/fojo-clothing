@@ -49,7 +49,7 @@ const ServicesType = () => {
     >
       {services.map((service, i) => (
         <motion.div
-          className="item-center flex flex-col justify-start gap-y-2 rounded-md border border-dotted border-primaryColor p-4"
+          className="item-center flex flex-col justify-start gap-y-2 rounded-md border-2 border-dotted border-primaryColor p-4"
           key={i}
           variants={containerVariants}
           initial="hidden"
