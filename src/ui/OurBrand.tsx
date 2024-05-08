@@ -35,7 +35,7 @@ const OurBrand = () => {
           variants={needleVariant}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "0px -30px 0px 100px", amount: 0.4 }}
+          viewport={{ once: true, amount: 0.4 }}
         >
           <img
             src={Needle.src}
@@ -48,7 +48,7 @@ const OurBrand = () => {
           variants={textVariant}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "0px -30px 0px 100px", amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           Experience timeless elegance and comfort with our exquisite
           collection. Our brand seamlessly blends contemporary and traditional

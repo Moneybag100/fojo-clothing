@@ -1,7 +1,6 @@
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-
-import { images } from "../../utils/bannerImages";
+import { bannerImages } from "../../utils/banner";
 import BannerContent from "./BannerContent";
 import HeaderContent from "../../ui/HeaderContent";
 import FollowUs from "../../ui/FollowUs";
@@ -32,7 +31,7 @@ const Banner = () => {
         autoPlayStrategy={"none"}
         disableDotsControls={true}
       >
-        {images.map((image, i) => (
+        {bannerImages.map((image, i) => (
           <BannerContent {...image} key={i} />
         ))}
       </AliceCarousel>

@@ -17,4 +17,9 @@ export const services: Array<serviceType> = [
     title: "consulting",
     text: "We’re here to assist you with any special requests or concerns, from fabric choices to outifit style inspirations. ",
   },
+  // {
+  //   image: style,
+  //   title: "Style Tips",
+  //   text: "Our team of experts is dedicated to helping you discover your signature look and confidently elevate your wardrobe. We provide tailored tips to suit your taste and inspire you to explore new styles that express your unique personality through fashion",
+  // },
 ];

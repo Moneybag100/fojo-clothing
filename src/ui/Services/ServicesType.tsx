@@ -41,7 +41,7 @@ const ServicesType = () => {
 
   return (
     <motion.div
-      className="mx-auto mt-28 grid w-full max-w-custom grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+      className="md:mt-18 lg:mt-22 mx-auto mt-16 grid w-full max-w-custom grid-cols-1 gap-8  md:grid-cols-2 lg:grid-cols-3"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -49,18 +49,22 @@ const ServicesType = () => {
     >
       {services.map((service, i) => (
         <motion.div
-          className="item-center flex flex-col justify-start gap-y-2"
+          className="item-center flex flex-col justify-start gap-y-2 rounded-sm p-4"
           key={i}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div className="mx-auto" variants={imageVariants}>
-            <img src={service.image.src} alt={service.image.altText} />
+          <motion.div className="mx-auto h-24" variants={imageVariants}>
+            <img
+              src={service.image.src}
+              alt={service.image.altText}
+              className="h-full"
+            />
           </motion.div>
           <motion.h3
-            className="mx-auto text-2xl font-semibold capitalize text-primaryColor md:text-3xl"
+            className="mx-auto text-2xl font-semibold capitalize md:text-3xl"
             variants={itemVariants}
           >
             {service.title}

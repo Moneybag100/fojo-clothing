@@ -30,11 +30,17 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="globalPadding sectionMargn item-center flex w-full flex-col justify-between"
+      className="globalPadding sectionMargn item-center flex w-full flex-col justify-between !py-20 "
+      style={{
+        background: `linear-gradient(to bottom right, rgba(139, 95, 191, 0.1), rgba(139, 95, 191, 0.2))`,
+        backgroundPosition: "center",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="mx-auto w-full max-w-custom text-left md:text-center">
         <SectionHeader title="Bespoke Services" />
-        <div className="mt-4 flex w-full flex-col items-start justify-between gap-4 md:mt-16 md:flex-row md:items-center">
+        <div className="mt-4 flex w-full flex-col items-start justify-between gap-4 md:mt-12 md:flex-row md:items-center lg:mt-14">
           <motion.div
             className="w-full space-y-4 text-left md:w-[40%]"
             variants={itemVariants}

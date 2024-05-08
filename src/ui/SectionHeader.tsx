@@ -27,7 +27,7 @@ const SectionHeader = ({ title, text }: SectionHeaderProp) => {
 
   return (
     <div>
-      <h2 className="subtitleFont font-display2 p-4 text-left md:p-0 md:text-center">
+      <h2 className="subtitleFont text-left font-display2 md:p-0 md:text-center">
         <motion.span
           className="block"
           variants={titleVariant}
