@@ -1,11 +1,11 @@
-import { Ceo as lead } from "../../utils/Image";
+import { CeoImage } from "../../utils/ceo";
 
 const Ceo = () => {
   return (
     <div className="mt-8 flex flex-col items-center justify-between gap-8 md:flex-row">
-      <div className=" relative w-full">
-        <img src={lead.src} alt={lead.altText} className="h-auto w-full" />
-        <p className="text-lightGrayText absolute bottom-3 left-3 text-xl font-medium">
+      <div className=" relative w-full md:min-w-[400px]">
+        <img src={CeoImage} alt="ceo image" className="h-auto w-full" />
+        <p className="absolute bottom-3 left-3 text-xl font-medium text-lightGrayText">
           <span className="block text-left font-semibold">Kojo Tega</span>
           <span className="block text-left">CEO kojo Fashion</span>
         </p>

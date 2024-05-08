@@ -16,14 +16,14 @@ const Footer = () => {
           <p className="text-lg font-semibold md:text-xl">Explore</p>
           <div className="flex flex-col items-start justify-between gap-3 text-sm">
             <Link
-              to="outfits"
+              to="about-us"
               smooth={true}
               className={"navLink"}
               spy={true}
               hashSpy={true}
               saveHashHistory={true}
               delay={200}
-              offset={100}
+              offset={-80}
               duration={1000}
             >
               Outfits
@@ -36,7 +36,7 @@ const Footer = () => {
               hashSpy={true}
               saveHashHistory={true}
               delay={200}
-              offset={100}
+              offset={-80}
               duration={1000}
             >
               About Us
@@ -49,7 +49,7 @@ const Footer = () => {
               hashSpy={true}
               saveHashHistory={true}
               delay={200}
-              offset={100}
+              offset={-80}
               duration={1000}
             >
               Services
@@ -60,14 +60,14 @@ const Footer = () => {
           <p className="text-lg font-semibold md:text-xl">Collections</p>
           <div className="flex flex-col items-start justify-between gap-3 text-sm">
             <Link
-              to="outfits"
+              to="about-us"
               smooth={true}
               className={"navLink"}
               spy={true}
               hashSpy={true}
               saveHashHistory={true}
               delay={200}
-              offset={100}
+              offset={-80}
               duration={1000}
             >
               Outfits
@@ -81,13 +81,13 @@ const Footer = () => {
           <div className="flex flex-col items-start justify-between gap-[2px] text-sm">
             <Link
               to="contact"
-              smooth={true}
+              smooth={"easeOutQuad"}
               className={"navLink"}
               spy={true}
               hashSpy={true}
               saveHashHistory={true}
               delay={200}
-              offset={100}
+              offset={-80}
               duration={1000}
             >
               Get in Touch
