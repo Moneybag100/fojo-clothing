@@ -21,10 +21,7 @@ export const outfitImages: Array<Image> = [
     src: "https://res.cloudinary.com/de2pxge6f/image/upload/v1715103608/Fojofashion/Outfits%20Images/2023_07_09_15_39_IMG_4314_pxkfb1.jpg",
     altText: "outfitImage",
   },
-  {
-    src: "https://res.cloudinary.com/de2pxge6f/image/upload/v1715103608/Fojofashion/Outfits%20Images/2023_07_09_15_39_IMG_4314_pxkfb1.jpg",
-    altText: "outfitImage",
-  },
+
   {
     src: "https://res.cloudinary.com/de2pxge6f/image/upload/v1715103593/Fojofashion/Outfits%20Images/2024_02_18_13_30_IMG_5912_uai70p.jpg",
     altText: "outfitImage",
