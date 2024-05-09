@@ -33,7 +33,7 @@ const OutfitContent = () => {
           text="Meticulous attention to detail"
         />
         <motion.p
-          className=" mt-4 text-lg font-semibold"
+          className=" mt-4 text-lg font-semibold md:text-xl"
           variants={textVariant}
           initial="hidden"
           whileInView="visible"

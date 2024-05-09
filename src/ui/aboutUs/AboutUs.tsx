@@ -5,13 +5,12 @@ const AboutUs = () => {
   return (
     <section id="about-us" className="globalPadding sectionMargn flex  w-full">
       <div className="m-auto w-full max-w-custom text-left md:text-center ">
-        <SectionHeader title="About Kojo Clothing" />
+        <SectionHeader title="About The Brand" />
         <p className="paragraphFont  mt-4 md:mt-16">
-          About Kojo Clothing is a tailoring and custom clothing brand in Ibadan
-          Nigeria. What sets our shop apart? We&rsquo;re locally-owned and are
-          committed to exceptional customer experiences. Clients are never
-          numbers on an investor update; they&rsquo;re part of our community,
-          and often become friends.
+          Fojo Clothing is a unisex brand designed for the bold individual who
+          seeks representative outfits that make a statement. We offer a curated
+          selection of fabrics, stylish ensembles, and expert tips to elevate
+          your fashion game and set you apart from the crowd.
         </p>
         <Ceo />
       </div>

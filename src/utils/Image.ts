@@ -8,6 +8,7 @@ import serviceImage2 from "/src/assets/services/servicesImage.jpg";
 import designIcon from "/src/assets/services/designIcon.png";
 import alterationIcon from "/src/assets/services/alterationIcon.png";
 import consultantIcon from "/src/assets/services/consultantIcon.png";
+import style from "/src/assets/services/fabrics.png";
 
 // logo
 export const Logo: Image = {
@@ -41,4 +42,8 @@ export const alteration: Image = {
 export const consultant: Image = {
   src: consultantIcon,
   altText: "consultant image",
+};
+export const styleIcon: Image = {
+  src: style,
+  altText: "style image",
 };

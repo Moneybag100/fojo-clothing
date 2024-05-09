@@ -27,9 +27,9 @@ const SectionHeader = ({ title, text }: SectionHeaderProp) => {
 
   return (
     <div>
-      <h2 className="subtitleFont text-left font-display2 md:p-0 md:text-center">
+      <h2 className="subtitleFont text-left md:p-0 md:text-center">
         <motion.span
-          className="block"
+          className="block capitalize"
           variants={titleVariant}
           initial="hidden"
           whileInView="visible"
@@ -42,7 +42,7 @@ const SectionHeader = ({ title, text }: SectionHeaderProp) => {
         </motion.span>
 
         <motion.span
-          className="block text-lg font-medium italic text-primaryColor"
+          className="block text-xl font-medium italic text-primaryColor md:text-[1.4rem]"
           variants={textVariant}
           initial="hidden"
           whileInView="visible"

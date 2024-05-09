@@ -11,10 +11,10 @@ const Ceo = () => {
         </p>
       </div>
       <p className="paragraphFont italic">
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
-        possimus reiciendis vero earum minus magnam inventore accusantium
-        corporis rem libero ex, quaerat sapiente voluptatum at perferendis sit
-        perspiciatis laborum expedita?"
+        "At Fojo Clothing, we believe that clothing is more than just covering
+        your body; it is a reflection of your identity. That's why we are
+        committed to providing apparel that resonates with your unique
+        personality and style."
       </p>
     </div>
   );

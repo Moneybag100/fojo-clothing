@@ -44,7 +44,7 @@ const OurBrand = () => {
           />
         </motion.div>
         <motion.p
-          className="paragraphFont mx-auto mt-4 text-center lg:w-3/5"
+          className="mx-auto mt-4 text-center text-lg italic lg:w-3/5"
           variants={textVariant}
           initial="hidden"
           whileInView="visible"

@@ -1,15 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import SocialLink from "./SocialLink";
-import logo from "./../assets/logo/fojoWhiteLogo.png";
+import logo from "./../assets/logo/fojoCircleWhite.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <div className="globalPadding flex w-full flex-col bg-charcoal">
       <div className="mx-auto flex w-full  max-w-custom flex-col items-start justify-between gap-8 pt-3 text-left md:flex-row md:text-center">
-        <div className="h-12 w-12">
-          <img src={logo} alt={"logo"} className="h-full w-full" />
+        <div className=" w-14">
+          <img src={logo} alt={"logo"} className="h-auto w-full" />
         </div>
 
         <div className="flex flex-col items-start justify-between gap-1 text-lightOffWhite md:ml-auto">
