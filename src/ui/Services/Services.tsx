@@ -39,7 +39,7 @@ const Services = () => {
       }}
     >
       <div className="mx-auto w-full max-w-custom text-left md:text-center">
-        <SectionHeader title="Bespoke Services" />
+        <SectionHeader title="Our Services" />
         <div className="mt-4 flex w-full flex-col items-start justify-between gap-4 md:mt-12 md:flex-row md:items-center lg:mt-14">
           <motion.div
             className="w-full space-y-4 text-left md:w-[40%]"

@@ -30,9 +30,9 @@ const textVariant = {
 const HeaderContent = () => {
   return (
     <div className="absolute left-0 top-0 z-[998] flex h-full w-full flex-col items-center justify-center text-lightOffWhite">
-      <div className="mx-auto w-28 overflow-hidden text-center font-medium md:w-32 lg:w-40">
+      <div className="mx-auto  overflow-hidden text-center font-medium">
         <motion.div
-          className=" mx-auto w-28 text-center font-medium md:w-32 lg:w-40"
+          className=" mx-auto w-36 text-center font-medium md:w-40 lg:w-48"
           variants={imageVariant}
           initial="hidden"
           whileInView="visible"
@@ -42,7 +42,7 @@ const HeaderContent = () => {
           <img src={logo} alt="logo image" className="h-auto w-full" />
         </motion.div>
       </div>
-      <div className="mx-auto h-9 overflow-hidden px-[2px]">
+      <div className="mx-auto mt-4 h-9 overflow-hidden px-[2px]">
         <motion.div
           variants={textVariant}
           initial="hidden"
@@ -50,7 +50,7 @@ const HeaderContent = () => {
           whileInView="display"
           viewport={{ once: true }}
         >
-          <h1 className="mx-auto text-xl font-medium italic m:text-2xl md:text-[1.7rem]">
+          <h1 className="mx-auto text-2xl font-medium italic m:text-4xl md:text-3xl">
             Luxury in Comfort
           </h1>
         </motion.div>

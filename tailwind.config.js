@@ -28,8 +28,7 @@ export default {
     },
     fontFamily: {
       // display: ["Cormorant Garamond", "serif"],
-      display: ["Noto Sans Georgian", "sans - serif"],
-      display2: ["GFS Didot", "serif"],
+      display: ["Playfair Display", "serif"],
     },
     maxWidth: {
       custom: "1000px",

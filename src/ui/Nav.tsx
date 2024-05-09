@@ -44,7 +44,7 @@ const Nav = () => {
         </div>
         <div className="flex w-full max-w-[500px]">
           <NavLinks
-            className={`my-auto ml-auto hidden !text-sm md:block ${isScrolled ? "md:!text-textColor" : ""}`}
+            className={`my-auto ml-auto hidden !text-sm md:block md:!text-lg ${isScrolled ? "md:!text-textColor" : ""}`}
           />
         </div>
 
