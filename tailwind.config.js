@@ -14,6 +14,7 @@ export default {
       // charcoal: "#000000",
       // charcoal: "#2C1E3D",
       charcoal: "#333333",
+      primaryRed: "#FF3E3E",
     },
     screens: {
       xxm: "360px",

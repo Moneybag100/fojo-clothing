@@ -67,6 +67,18 @@
   transform: scale(1.18);
 }
 
+.phoneInputStyle {
+  @apply !h-10 w-full border-0 bg-lightOffWhite px-6 py-4 !text-base outline-none;
+}
+
+.react-international-phone-country-selector {
+  @apply !h-10;
+}
+
+.react-international-phone-country-selector-button {
+  @apply !h-10 border-r-0 px-3;
+}
+
 @keyframes slideOut {
   0% {
     transform: translateY(100%);

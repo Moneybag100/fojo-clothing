@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 import Input from "../Input";
 import TextArea from "../TextArea";
+import { SubmitHandler, useController, useForm } from "react-hook-form";
+import { isEmailValid, isPhoneValid, toLowerCase } from "../../utils/helper";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -14,17 +18,6 @@ const containerVariants = {
     },
   },
 };
-
-// const textVariant = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       duration: 1,
-//       ease: "easeOut",
-//     },
-//   },
-// };
 
 const textVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -63,7 +56,39 @@ const buttonVariant = {
   },
 };
 
+interface IFormInput {
+  Name: string;
+  phoneNumber: string;
+  email: string;
+}
+
 const ContactForm = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    control,
+  } = useForm<IFormInput>();
+
+  const { field } = useController({
+    name: "phoneNumber",
+    control,
+
+    rules: {
+      required: {
+        value: true,
+        message: "This field is required",
+      },
+      validate: {
+        isPhoneValid: (value) => isPhoneValid(value) || "Invalid phone number",
+      },
+    },
+  });
+
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log(data);
+  };
+
   return (
     <motion.div
       className="flex w-full flex-col items-start justify-between space-y-2 text-left md:space-y-6 ml:max-w-[500px]"
@@ -72,55 +97,90 @@ const ContactForm = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <motion.h3
-        className="text-xl font-semibold"
-        variants={textVariant}
-        // initial="hidden"
-        // whileInView="visible"
-        // viewport={{ once: true }}
-      >
+      <motion.h3 className="text-xl font-semibold" variants={textVariant}>
         Contact Form
       </motion.h3>
       <motion.form
+        id="contact-form"
         className="w-full  space-y-2 rounded-md bg-primaryColor p-6"
         variants={formVariant}
-        // initial="hidden"
-        // whileInView="visible"
-        // viewport={{ once: true, amount: 0.2 }}
+        onSubmit={handleSubmit(onSubmit)}
       >
         <Input
           name="name"
           id="name"
           label="Name"
           className="w-full text-base"
+          error={errors}
+          disabled={isSubmitting}
+          register={register}
+          validationSchema={{
+            required: {
+              value: true,
+              message: "This field is required",
+            },
+          }}
         />
-        <Input
-          name="phoneNumber"
-          id="phoneNumber"
-          label="Phone Number"
-          className="text-base"
-        />
+        <div className=" relative w-full text-lightOffWhite">
+          <label htmlFor="phoneNumber" className="text-base">
+            Phone Number
+          </label>
+          <PhoneInput
+            defaultCountry="ng"
+            value={field.value}
+            onChange={field.onChange}
+            className="w-full"
+            inputClassName="phoneInputStyle"
+          />
+          {errors && errors["phoneNumber"] && (
+            <span className="text-primaryRed absolute -top-0 right-0 text-[.75rem]">
+              {errors["phoneNumber"].message}
+            </span>
+          )}
+        </div>
+
         <Input
           name="email"
           id="email"
           label="Email"
           type="email"
+          error={errors}
+          register={register}
+          disabled={isSubmitting}
+          validationSchema={{
+            required: {
+              value: true,
+              message: "This field is required",
+            },
+            validate: {
+              isEmailValid: (value) => isEmailValid(value) || "Invalid email",
+            },
+            setValueAs: (v) => toLowerCase(v),
+          }}
           className="text-base"
         />
         <TextArea
           label="Message"
           name="message"
           id="message"
+          error={errors}
+          disabled={isSubmitting}
+          register={register}
+          validationSchema={{
+            required: {
+              value: true,
+              message: "This field is required",
+            },
+          }}
           className="text-base"
         />
       </motion.form>
 
       <motion.button
+        form="contact-form"
         className="mr-auto rounded-md bg-primaryColor px-6 py-[0.35rem] text-lightOffWhite"
         variants={buttonVariant}
-        // initial="hidden"
-        // whileInView="visible"
-        // viewport={{ once: true }}
+        disabled={isSubmitting}
       >
         Submit
       </motion.button>

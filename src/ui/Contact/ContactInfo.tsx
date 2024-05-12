@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { fojoEmail, fojoPhoneNumber } from "../../utils/contactInfo";
 
 const containerVariants = {
   hidden: { opacity: 0.5 },
@@ -40,8 +41,8 @@ const ContactInfo = () => {
         variants={itemVariants}
       >
         <h3 className="text-xl font-semibold md:mb-3">Get In Touch</h3>
-        <p>kojofashion@kojofashion.com</p>
-        <p>+23490556666643</p>
+        <p>{fojoEmail}</p>
+        <p>{fojoPhoneNumber}</p>
         <p className="-space-y-1">
           <span className="block">No 1 delta avenue</span>
           <span className="block">Otta farm road</span>
@@ -52,8 +53,7 @@ const ContactInfo = () => {
         <div className="mr-auto flex flex-col  items-start justify-between space-y-1 text-left md:space-y-3">
           <h3 className="text-xl font-semibold">Visit us</h3>
           <p>
-            r We are located on the corner of Sunflower and Bristol. Second
-            level.
+            We are located on the corner of Sunflower and Bristol. Second level.
           </p>
         </div>
         <motion.div
