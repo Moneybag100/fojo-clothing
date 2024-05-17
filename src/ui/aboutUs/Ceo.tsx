@@ -69,7 +69,7 @@ const Ceo = () => {
       >
         <img src={CeoImage} alt="ceo image" className="h-auto w-full" />
         <motion.p
-          className="text-primaryColor2 absolute bottom-3 left-3 text-xl font-medium"
+          className="absolute bottom-3 left-3 text-xl font-medium text-lightGrayText"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
