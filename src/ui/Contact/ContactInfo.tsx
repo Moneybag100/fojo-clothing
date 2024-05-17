@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-import { fojoEmail, fojoPhoneNumber } from "../../utils/contactInfo";
+import {
+  fojoAddress,
+  fojoEmail,
+  fojoPhoneNumber,
+} from "../../utils/contactInfo";
 
 const containerVariants = {
   hidden: { opacity: 0.5 },
@@ -43,18 +47,16 @@ const ContactInfo = () => {
         <h3 className="text-xl font-semibold md:mb-3">Get In Touch</h3>
         <p>{fojoEmail}</p>
         <p>{fojoPhoneNumber}</p>
-        <p className="-space-y-1">
-          <span className="block">No 1 delta avenue</span>
-          <span className="block">Otta farm road</span>
-          <span className="block">Ogun Sate</span>
-        </p>
+        {/* <p className="-space-y-1">
+          <span className="block">KM 10 Idi-Iroko road</span>
+          <span className="block">Ota</span>
+          <span className="block">Ogun State, Nigeria</span>
+        </p> */}
       </motion.div>
       <motion.div className="flex flex-col gap-y-4 " variants={itemVariants}>
         <div className="mr-auto flex flex-col  items-start justify-between space-y-1 text-left md:space-y-3">
           <h3 className="text-xl font-semibold">Visit us</h3>
-          <p>
-            We are located on the corner of Sunflower and Bristol. Second level.
-          </p>
+          <p>We are located at {fojoAddress}</p>
         </div>
         <motion.div
           className="md:space-y-6text-left flex flex-col items-start justify-between  space-y-1 md:space-y-2"
