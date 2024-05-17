@@ -37,7 +37,7 @@ const Banner = () => {
       </AliceCarousel>
       <HeaderContent />
       <motion.div
-        className="absolute -bottom-[24px] left-1/2  z-[998] w-max -translate-x-1/2 bg-lightOffWhite md:-bottom-[1px] md:left-[-6.5rem] md:-translate-y-[200%] md:translate-x-0 md:-rotate-90"
+        className="absolute -bottom-[24px] left-1/2  z-[998] w-max -translate-x-1/2 bg-lightOffWhite md:-bottom-[4px] md:left-[-5.2rem] md:-translate-y-[200%] md:translate-x-0 md:-rotate-90"
         variants={linksVariant}
         initial="hidden"
         animate="visible"

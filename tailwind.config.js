@@ -5,15 +5,16 @@ export default {
     colors: {
       white: "#FFFFFF",
       primaryColor: "#4B0082",
-      primaryColor2: "#8B5FBF",
+      // primaryColor: "#8B5FBF",
       textColor: "#333333",
       bg: "#FFFFFF",
       // bg: "#F5F5F5 ",
       lightOffWhite: "#F8F8F8",
       lightGrayText: "#CCCCCC",
       // charcoal: "#000000",
-      charcoal2: "#2C1E3D",
+      // charcoal: "#2C1E3D",
       charcoal: "#333333",
+      primaryRed: "#FF3E3E",
     },
     screens: {
       xxm: "360px",
