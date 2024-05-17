@@ -3,3 +3,4 @@ export const fojoEmail = "fojobrand@gmail.com";
 export const fojoX = "https://x.com/fojobrand";
 export const fojoIntagram =
   "https://www.instagram.com/fojoclothing_?igsh=MTZ4cmI3NHloNzNqOQ%3D%3D&utm_source=qr";
+export const fojoAddress = "KM 10 Idi-Iroko road Ota, Ogun State Nigeria.";

@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
+import { animateScroll } from "react-scroll";
+import emailjs from "@emailjs/browser";
+import { SubmitHandler, useController, useForm } from "react-hook-form";
+import { isEmailValid, isPhoneValid, toLowerCase } from "../../utils/helper";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import Input from "../Input";
 import TextArea from "../TextArea";
-import { SubmitHandler, useController, useForm } from "react-hook-form";
-import { isEmailValid, isPhoneValid, toLowerCase } from "../../utils/helper";
+import toast from "react-hot-toast";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -56,16 +59,23 @@ const buttonVariant = {
   },
 };
 
+const options = {
+  duration: 1500,
+  smooth: true,
+};
+
 interface IFormInput {
-  Name: string;
+  name: string;
   phoneNumber: string;
   email: string;
+  message: string;
 }
 
 const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
     control,
   } = useForm<IFormInput>();
@@ -73,7 +83,6 @@ const ContactForm = () => {
   const { field } = useController({
     name: "phoneNumber",
     control,
-
     rules: {
       required: {
         value: true,
@@ -85,8 +94,32 @@ const ContactForm = () => {
     },
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data);
+    const templateParams = {
+      name: data.name,
+      phoneNumber: data.phoneNumber,
+      email: data.email,
+      message: data.message,
+    };
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        templateParams,
+        { publicKey: import.meta.env.VITE_PUBLIC_KEY },
+      )
+      .then(
+        () => {
+          reset();
+          toast.success("message sent successfully");
+          animateScroll.scrollToBottom(options);
+        },
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        (_error) => {
+          toast.error("Failed, something went wrong.");
+        },
+      );
   };
 
   return (
@@ -102,7 +135,7 @@ const ContactForm = () => {
       </motion.h3>
       <motion.form
         id="contact-form"
-        className="w-full  space-y-2 rounded-md bg-primaryColor p-6"
+        className="w-full space-y-2 rounded-md bg-primaryColor p-6"
         variants={formVariant}
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -121,7 +154,7 @@ const ContactForm = () => {
             },
           }}
         />
-        <div className=" relative w-full text-lightOffWhite">
+        <div className="relative w-full text-lightOffWhite">
           <label htmlFor="phoneNumber" className="text-base">
             Phone Number
           </label>
@@ -133,7 +166,7 @@ const ContactForm = () => {
             inputClassName="phoneInputStyle"
           />
           {errors && errors["phoneNumber"] && (
-            <span className="text-primaryRed absolute -top-0 right-0 text-[.75rem]">
+            <span className="absolute -top-0 right-0 text-[.75rem] text-primaryRed">
               {errors["phoneNumber"].message}
             </span>
           )}

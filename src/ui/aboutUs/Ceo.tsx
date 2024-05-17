@@ -69,7 +69,7 @@ const Ceo = () => {
       >
         <img src={CeoImage} alt="ceo image" className="h-auto w-full" />
         <motion.p
-          className="absolute bottom-3 left-3 text-xl font-medium text-primaryColor"
+          className="absolute bottom-3 left-3 text-xl font-medium text-lightGrayText"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -97,7 +97,7 @@ const Ceo = () => {
               amount: 0.2,
             }}
           >
-            CEO Fojo Fashion
+            CEO Fojo Inc.
           </motion.span>
         </motion.p>
       </motion.div>
