@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
+import { animateScroll } from "react-scroll";
 import { Rotate as Hamburger } from "hamburger-react";
 import NavLinks from "./NavLinks";
 import logo from "./../assets/logo/fojoWhiteLogo.png";
 import logo2 from "./../assets/logo/fojoPlainPurpleLogo.png";
 // import logoSvg3 from "./../assets/logo/fojoPlainPurpleLogo.svg";
 import Sidebar from "./Sidebar";
+
+const options = {
+  duration: 1500,
+  smooth: true,
+};
 
 const Nav = () => {
   const [showSideBar, setShowSideBar] = useState(false);
@@ -23,9 +29,9 @@ const Nav = () => {
     };
   }, []);
 
-  // const toggleSidebar = () => {
-  //   setShowSideBar(!showSideBar);
-  // };
+  const scrollToTop = () => {
+    animateScroll.scrollToTop(options);
+  };
 
   const closeSidebar = () => {
     setShowSideBar(false);
@@ -35,7 +41,10 @@ const Nav = () => {
       className={`globalPadding fixed left-0 top-0 z-[999] flex w-full transition-all duration-300 ease-linear  md:!py-3 ${isScrolled ? "bg-bg shadow-xl" : "bg-none"}`}
     >
       <div className="bg-purple-600 relative m-auto flex  w-full max-w-custom items-center">
-        <div className="mr-auto h-14  w-14  rounded-md md:h-16 md:w-16">
+        <div
+          className="mr-auto h-14  w-14  cursor-pointer rounded-md md:h-16 md:w-16"
+          onClick={scrollToTop}
+        >
           <img
             src={isScrolled ? logo2 : logo}
             alt={"logo"}

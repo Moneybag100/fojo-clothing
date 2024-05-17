@@ -113,7 +113,7 @@ const ContactForm = () => {
         () => {
           reset();
           toast.success("message sent successfully");
-          animateScroll.scrollToBottom(options);
+          animateScroll.scrollToTop(options);
         },
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         (_error) => {
